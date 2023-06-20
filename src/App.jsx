@@ -27,13 +27,15 @@ function App() {
         <Search />
 
         <hr />
-
+        {/* Creating an instance of List component*/}
+        <List />
+        {/* Creating another instance of List component*/}
         <List />
       </div>
   );
 }
 
-function Search() {
+const Search = () => {
   return (
     <div>
       <label htmlFor='search'>Search:</label>
@@ -42,10 +44,10 @@ function Search() {
   )
 }
 
-function List() {
+const List = () => {
   return (
     <ul>
-      {list.map(function (item) {
+      {list.map((item) => {
         return (
           <li key={item.objectID}>
             <span>
